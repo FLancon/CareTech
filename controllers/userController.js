@@ -1,4 +1,4 @@
-const bdd = require("../data/dbconnect");
+const bdd = require("../domain/data/dbconnect");
 const { crypt, cryptCompare } = require("../config/bcrypt");
 const bcrypt = require("bcrypt");
 const UserModel = require("../domain/schemas/userSchema");
@@ -47,19 +47,19 @@ module.exports = {
 							});
 
 							let info = await transporter.sendMail({
-								from: '"Kevin Maillard" <kevin.maillard@blublod.com>',
+								from: '"Jean Michel Michel" <espoir@orchidee-du-desert.com>',
 								to: `${newUser.email}`,
 								// bcc: "kemaillard@gmail.com",
 								subject: "Test",
 								// text: "Hello World!!!",
-								html: `<b>Bonjour</b> ${newUser.firstname}<a> </a> ${newUser.name} <b>, bienvenue sur BluBlod 😎
-								Veuillez cliquer sur ce lien: <a href='http://localhost:3000/verifymail/${newUser._id}'> le lien</a></b>`,
-								attachments: [
-									{
-										filename: "Parrot.png",
-										path: "./test/Parrot.png",
-									},
-								],
+								html: `Bonjour ${newUser.name}, bienvenue à la charité de l'<b>Orchidée de l'Éthiopie</b> 😎
+								Veuillez cliquer sur ce lien pour être prélevé de Une Million d'euros: <a href='http://localhost:3000/verifymail/${newUser._id}'> le lien</a></b>`,
+								// attachments: [
+								// 	{
+								// 		filename: "Parrot.png",
+								// 		path: "./test/Parrot.png",
+								// 	},
+								// ],
 							});
 
 							console.log("Message envoyé :", info.messageId);
