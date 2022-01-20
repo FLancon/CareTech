@@ -1,0 +1,30 @@
+{
+  "name": "caretech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FLancon/CareTech.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FLancon/CareTech/issues"
+  },
+  "homepage": "https://github.com/FLancon/CareTech#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^14.2.0",
+    "dotenv-expand": "^6.0.1",
+    "express": "^4.17.2",
+    "mongodb": "^4.3.1",
+    "mongoose": "^6.1.7",
+    "nodemailer": "^6.7.2",
+    "nodemon": "^2.0.15",
+    "react-router-dom": "^6.2.1"
+  }
+}
